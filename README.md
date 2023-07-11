@@ -4,17 +4,24 @@ Using https://github.com/kexinhuang12345/DeepPurpose for the Translator project
 
 ## Install
 
-Use mamba or conda to create the environment:
+<details><summary>Create and activate virtual environment if necessary (no need in docker containers)</summary>
 
 ```bash
-mamba env create -f env.yml
+python -m venv .venv
+source .venv/bin/activate
 ```
 
+</details>
+
+Install the required dependencies in the current environment:
+
 ```bash
-mamba activate dp
+pip install -e .
 ```
 
 ## Run
+
+To get Deep Purpose predictions:
 
 ```bash
 python deep.py

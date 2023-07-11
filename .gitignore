@@ -1,2 +1,4 @@
 /data/
 /save_folder/
+/.venv/
+/.pytest_cache/
