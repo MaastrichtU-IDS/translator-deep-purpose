@@ -1,8 +1,8 @@
-# Translator Deep Purpose
+# 🤿 Translator Deep Purpose
 
 Using https://github.com/kexinhuang12345/DeepPurpose for the Translator project
 
-## Install
+## 🧶 Install
 
 <details><summary>Create and activate virtual environment if necessary (no need in docker containers)</summary>
 
@@ -19,7 +19,7 @@ Install the required dependencies in the current environment:
 pip install -e .
 ```
 
-## Run
+## 🛩️ Run
 
 To get Deep Purpose predictions:
 
