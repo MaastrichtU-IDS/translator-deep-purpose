@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+version = "0.0.1"
+requires-python = ">=3.8"
+name = "translator-deep-purpose"
+description = "Deep Purpose for Translator project."
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+authors = [
+    { name = "Vincent Emonet", email = "vincent.emonet@gmail.com" },
+]
+maintainers = [
+    { name = "Vincent Emonet", email = "vincent.emonet@gmail.com" },
+]
+keywords = [
+    "python",
+    "translator",
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dynamic = ["version"]
+
+dependencies = [
+    "rdkit",
+    "notebook",
+    "scikit-learn",
+    "git+https://github.com/bp-kelley/descriptastorus",
+    "DeepPurpose",
+]
+
+
+[project.optional-dependencies]
+test = [
+    "pytest >=7.1.3",
+    "pytest-cov >=3.0.0",
+    "pre-commit >=3.3.0",
+    "mypy >=1.4.1",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/vemonet/translator-deep-purpose"
+Documentation = "https://github.com/vemonet/translator-deep-purpose"
+History = "https://github.com/vemonet/translator-deep-purpose/releases"
+Tracker = "https://github.com/vemonet/translator-deep-purpose/issues"
+Source = "https://github.com/vemonet/translator-deep-purpose"
+
+
+# ENVIRONMENTS AND SCRIPTS
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.envs.default]
+features = [
+    "test",
+]

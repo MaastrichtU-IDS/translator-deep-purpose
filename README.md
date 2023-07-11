@@ -11,7 +11,7 @@ mamba env create -f env.yml
 ```
 
 ```bash
-mamba activate DeepPurpose
+mamba activate dp
 ```
 
 ## Run
