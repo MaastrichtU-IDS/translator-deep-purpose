@@ -28,13 +28,12 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
-dynamic = ["version"]
 
 dependencies = [
     "rdkit",
     "notebook",
     "scikit-learn",
-    "git+https://github.com/bp-kelley/descriptastorus",
+    "descriptastorus @ git+https://github.com/bp-kelley/descriptastorus",
     "DeepPurpose",
 ]
 
