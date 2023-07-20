@@ -1,4 +1,7 @@
-/data/
-/save_folder/
+data/
+save_folder/
+result/
 /.venv/
 /.pytest_cache/
+
+.ipynb_checkpoints
