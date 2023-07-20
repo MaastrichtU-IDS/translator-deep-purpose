@@ -11,9 +11,11 @@ readme = "README.md"
 license = { file = "LICENSE.txt" }
 authors = [
     { name = "Vincent Emonet", email = "vincent.emonet@gmail.com" },
+    { name = "Rena Yang", email = "rena.yang@maastrichtuniversity.nl" },
 ]
 maintainers = [
     { name = "Vincent Emonet", email = "vincent.emonet@gmail.com" },
+    { name = "Rena Yang", email = "rena.yang@maastrichtuniversity.nl" },
 ]
 keywords = [
     "python",
@@ -48,11 +50,11 @@ test = [
 
 
 [project.urls]
-Homepage = "https://github.com/vemonet/translator-deep-purpose"
-Documentation = "https://github.com/vemonet/translator-deep-purpose"
-History = "https://github.com/vemonet/translator-deep-purpose/releases"
-Tracker = "https://github.com/vemonet/translator-deep-purpose/issues"
-Source = "https://github.com/vemonet/translator-deep-purpose"
+Homepage = "https://github.com/MaastrichtU-IDS/translator-deep-purpose"
+Documentation = "https://github.com/MaastrichtU-IDS/translator-deep-purpose"
+History = "https://github.com/MaastrichtU-IDS/translator-deep-purpose/releases"
+Tracker = "https://github.com/MaastrichtU-IDS/translator-deep-purpose/issues"
+Source = "https://github.com/MaastrichtU-IDS/translator-deep-purpose"
 
 
 # ENVIRONMENTS AND SCRIPTS
@@ -63,3 +65,7 @@ allow-direct-references = true
 features = [
     "test",
 ]
+
+
+[tool.hatch.envs.default.scripts]
+dev = "python src/deep.py {args}"

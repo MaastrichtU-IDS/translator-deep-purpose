@@ -19,10 +19,16 @@ Install the required dependencies in the current environment:
 pip install -e .
 ```
 
+Install RDkit with conda/mamba:
+
+```bash
+mamba install rdkit -y
+```
+
 ## 🛩️ Run
 
 To get Deep Purpose predictions:
 
 ```bash
-python deep.py
+python src/deep.py
 ```
