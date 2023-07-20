@@ -1,6 +1,0 @@
-version: "3"
-services:
-
-  deep-purpose:
-    build: .
-    # entrypoint: "tail -f /dev/null"
