@@ -37,6 +37,7 @@ dependencies = [
     "scikit-learn",
     "descriptastorus @ git+https://github.com/bp-kelley/descriptastorus",
     "DeepPurpose",
+    "trapi-predict-kit",
 ]
 
 
