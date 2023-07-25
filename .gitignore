@@ -1,6 +1,7 @@
 data/
 save_folder/
 result/
+runs/
 /.venv/
 /.pytest_cache/
 
