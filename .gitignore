@@ -6,3 +6,5 @@ runs/
 /.pytest_cache/
 
 .ipynb_checkpoints
+nohup.out
+*.log

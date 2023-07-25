@@ -1,8 +1,12 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+
 from DeepPurpose import utils, dataset
 from DeepPurpose import DTI as models
 from trapi_predict_kit import save
-import warnings
-warnings.filterwarnings("ignore")
+
+# import warnings
+# warnings.filterwarnings("ignore")
 
 print("Loading dataset")
 X_drugs, X_targets, y = dataset.load_process_DAVIS(
