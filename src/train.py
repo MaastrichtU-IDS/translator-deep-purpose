@@ -1,6 +1,7 @@
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
+import pickle
 from datetime import datetime
 from DeepPurpose import utils, dataset
 from DeepPurpose import DTI as models
@@ -56,6 +57,7 @@ print("Start training")
 model.train(train, val, test)
 
 print("Save the pre-trained model")
+
 save(
     model=model,
     path="models/deeppurpose",
@@ -63,4 +65,4 @@ save(
 )
 
 print(f"Ended at {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
-print(f"🕛 Complete runtime {str(datetime.now() - time_start)}")
+print(f"🕛 Complete runtime: {str(datetime.now() - time_start)}")

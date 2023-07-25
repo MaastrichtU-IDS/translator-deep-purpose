@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 version = "0.0.1"
 requires-python = ">=3.8"
 name = "translator-deep-purpose"
-description = "Deep Purpose for Translator project."
+description = "Deep Purpose predictions for the NIH NCATS Translator project."
 readme = "README.md"
 license = { file = "LICENSE.txt" }
 authors = [
@@ -33,11 +33,11 @@ classifiers = [
 
 dependencies = [
     "rdkit",
-    "notebook",
     "scikit-learn",
-    "descriptastorus @ git+https://github.com/bp-kelley/descriptastorus",
+    "descriptastorus",
     "DeepPurpose",
-    "trapi-predict-kit",
+    "trapi-predict-kit @ git+https://github.com/MaastrichtU-IDS/trapi-predict-kit.git",
+    # "trapi-predict-kit",
 ]
 
 
@@ -47,6 +47,7 @@ test = [
     "pytest-cov >=3.0.0",
     "pre-commit >=3.3.0",
     "mypy >=1.4.1",
+    "notebook",
 ]
 
 

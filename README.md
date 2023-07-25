@@ -25,10 +25,10 @@ pip install -e .
 
 ## Train
 
-Run in the background, make sure the env variable `PYTHONUNBUFFERED` is set to 1 to get logs in `nohup.out`
+Run in the background, send logs to `nohup.out`:
 
 ```bash
-nohup python src/train.py &
+scripts/train.sh
 ```
 
 ## 🛩️ Run
