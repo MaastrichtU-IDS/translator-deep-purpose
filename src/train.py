@@ -1,12 +1,18 @@
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
+from datetime import datetime
 from DeepPurpose import utils, dataset
 from DeepPurpose import DTI as models
 from trapi_predict_kit import save
 
 # import warnings
 # warnings.filterwarnings("ignore")
+
+
+time_start = datetime.now()
+print(f"Started at {time_start.strftime('%d/%m/%Y %H:%M:%S')}")
+
 
 print("Loading dataset")
 X_drugs, X_targets, y = dataset.load_process_DAVIS(
@@ -55,3 +61,6 @@ save(
     path="models/deeppurpose",
     sample_data=train
 )
+
+print(f"Ended at {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
+print(f"🕛 Complete runtime {str(datetime.now() - time_start)}")
