@@ -13,6 +13,7 @@ def train():
 
 
     print("Loading dataset")
+    dataset.load
     X_drugs, X_targets, y = dataset.load_process_DAVIS(
         path='./data',
         binary=False,
@@ -54,12 +55,15 @@ def train():
     model.train(train, val, test)
 
     print("Save the pre-trained model")
-
     save(
         model=model,
         path="models/deeppurpose",
         sample_data=train
     )
+    # Or using pickle directly
+    # import pickle
+    # with open("../models/deeppurpose.pkl", "rb") as f:
+    #     pickle.dump(model, f)
 
     print(f"Ended at {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
     print(f"🕛 Complete runtime: {str(datetime.now() - time_start)}")
