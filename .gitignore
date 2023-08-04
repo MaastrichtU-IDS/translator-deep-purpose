@@ -4,8 +4,9 @@ save_folder/
 result/
 runs/
 /.venv/
-/.pytest_cache/
+.pytest_cache/
 
+__pycache__
 .ipynb_checkpoints
 nohup.out
 *.log
