@@ -6,6 +6,8 @@ runs/
 /.venv/
 .pytest_cache/
 
+/notebooks/drkg-gnn-explanations/Input/AlzheimerGraph*
+
 __pycache__
 .ipynb_checkpoints
 nohup.out
