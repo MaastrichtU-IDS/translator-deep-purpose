@@ -21,27 +21,27 @@ def predict_dti(
         drug_encoding: str = None,
         target_encoding: str = None,
         model_path: str = None,
+        binary: bool = True,  # New parameter for binary classification
+        threshold: float = 30.0,  # New parameter for binary classification threshold
         options: dict = {}
     ) -> dict:
     time_start = datetime.now()
     # print(f"Started at {time_start.strftime('%d/%m/%Y %H:%M:%S')}")
-
+    
     X_drug = [input_drug]
     X_target = [input_target]
-    y = [0] # Use 0 as default
+    y = [0]  # Use 0 as default
 
     if not drug_encoding and model_name:
         drug_encoding =  model_name.split('_')[0]
     if not target_encoding and model_name:
         target_encoding = model_name.split('_')[1]
 
-    # model = load(path="models/deeppurpose")
     if model_path:
         with open(f"{model_path}", "rb") as f:
             model = pickle.load(f)
     else: 
         model = models.model_pretrained(model=model_name)
-
 
     X_pred = utils.data_process(
         X_drug, X_target, y,
@@ -50,9 +50,14 @@ def predict_dti(
     )
     y_pred = model.predict(X_pred)
 
+    if binary:
+        # Convert to binary based on the threshold
+        y_pred_binary = 1 if y_pred[0] < threshold else 0
+        y_pred = y_pred_binary
+
     # print(f"🕛 Complete runtime: {str(datetime.now() - time_start)}")
     return {
-        "score": y_pred[0],
+        "score": y_pred,
         "duration": datetime.now() - time_start,
         "drug": input_drug,
         "target": input_target
